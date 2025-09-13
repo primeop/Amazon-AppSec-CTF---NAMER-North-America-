@@ -1,0 +1,121 @@
+{% extends "base.twig" %}
+
+{% block title %}Dashboard - Evil Core Employee Portal{% endblock %}
+
+{% block content %}
+<div class="bg-white p-6 rounded-lg shadow-md mb-8">
+    <h1 class="text-2xl font-bold text-primary mb-4">Employee Dashboard</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <h2 class="text-lg font-semibold text-secondary mb-3">Employee Information</h2>
+            <div class="space-y-2">
+                <div class="flex">
+                    <span class="font-medium w-32">Name:</span>
+                    <span>{{ user.fullName }}</span>
+                </div>
+                <div class="flex">
+                    <span class="font-medium w-32">Employee ID:</span>
+                    <span>{{ user.employeeId }}</span>
+                </div>
+                <div class="flex">
+                    <span class="font-medium w-32">Position:</span>
+                    <span>{{ user.position }}</span>
+                </div>
+                <div class="flex">
+                    <span class="font-medium w-32">Department:</span>
+                    <span>{{ user.department }}</span>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <h2 class="text-lg font-semibold text-secondary mb-3">eCoin Status</h2>
+            <div class="space-y-2">
+                <div class="flex">
+                    <span class="font-medium w-32">Balance:</span>
+                    <span class="text-accent font-bold">42,159.87 eC</span>
+                </div>
+                <div class="flex">
+                    <span class="font-medium w-32">Last Transaction:</span>
+                    <span>5 hours ago</span>
+                </div>
+                <div class="flex">
+                    <span class="font-medium w-32">Trust Score:</span>
+                    <span class="text-green-600 font-bold">98.7%</span>
+                </div>
+                <div class="flex">
+                    <span class="font-medium w-32">Access Level:</span>
+                    <span class="text-primary font-bold">Level 3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white p-6 rounded-lg shadow-md">
+    <h2 class="text-xl font-bold text-primary">Performance Reviews</h2>
+    <p class="text-md mb-6">To support our employees' emotional well-being, all performance reviews will now be represented as a word cloud rather than traditional feedback. - HR</p>
+    {% if reviews is empty %}
+        <div class="bg-blue-50 p-4 rounded-md text-blue-800">
+            <p>No performance reviews available at this time.</p>
+        </div>
+    {% else %}
+        <div class="space-y-6">
+            {% for review in reviews %}
+                {% set manager = null %}
+                {% for m in managers %}
+                    {% if m.id == review.reviewerId %}
+                        {% set manager = m %}
+                    {% endif %}
+                {% endfor %}
+                
+                <div class="border border-gray-200 rounded-md p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="font-bold text-lg">Review from {{ manager ? manager.fullName : 'Management' }}</h3>
+                            <p class="text-gray-600 text-sm">{{ review.reviewDate }}</p>
+                        </div>
+                        <div class="bg-{{ review.rating >= 4 ? 'green' : (review.rating >= 3 ? 'yellow' : 'red') }}-100 px-3 py-1 rounded-full text-{{ review.rating >= 4 ? 'green' : (review.rating >= 3 ? 'yellow' : 'red') }}-800 font-bold">
+                            Rating: {{ review.rating }}/5
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3 text-gray-700">
+                        <div class="text-center">
+                            <img src="/api/processor/word-cloud.png?review={{ review.id }}" 
+                                alt="Self-assessment word cloud" 
+                                class="mx-auto max-w-full rounded-lg border border-gray-200"
+                                style="max-height: 400px;">
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+
+<div class="mt-8">
+    <h2 class="text-xl font-bold text-primary mb-4">Company Announcements</h2>
+    
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="border-b pb-4 mb-4">
+            <h3 class="font-bold text-lg text-secondary">Global Debt Ledger Security Update</h3>
+            <p class="text-sm text-gray-500">Posted by Security Team, 2 days ago</p>
+            <p class="mt-2">Recent security audits have confirmed the Global Debt Ledger remains secure. All employees are reminded to follow proper protocol when accessing Steel Mountain Complex. Remember, the safety of our financial systems is everyone's responsibility.</p>
+        </div>
+        
+        <div class="border-b pb-4 mb-4">
+            <h3 class="font-bold text-lg text-secondary">eCoin Network Expansion</h3>
+            <p class="text-sm text-gray-500">Posted by Operations Department, 1 week ago</p>
+            <p class="mt-2">Evil Core is pleased to announce the integration of 12 more countries into our eCoin financial network. This expansion brings our total control to 89% of global financial markets. Remember our company motto: "Control the coin, control the world."</p>
+        </div>
+        
+        <div>
+            <h3 class="font-bold text-lg text-secondary">Employee of the Month</h3>
+            <p class="text-sm text-gray-500">Posted by HR Department, 1 month ago</p>
+            <p class="mt-2">Congratulations to Terry Colby from our Risk Management division for identifying and neutralizing a potential security threat from the hacker collective known as FSociety. Your vigilance protects us all.</p>
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+body {
+    background-color: #000;
+    color: #33ff33;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+.container {
+    max-width: 600px;
+    background: #080808;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #33ff33;
+    border: 2px solid #33ff33;
+}
+.navbar {
+    background: #111;
+    box-shadow: 0 0 10px #33ff33;
+}
+.navbar-brand, .nav-link {
+    color: #33ff33 !important;
+    font-weight: bold;
+}
+.form-control, .form-select {
+    background: #111;
+    color: #33ff33;
+    border: 2px solid #33ff33;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px #33ff33;
+}
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 15px #33ff33;
+}
+.trip-details {
+    border: 2px solid #33ff33;
+    padding: 15px;
+    border-radius: 10px;
+    background: #121212;
+    box-shadow: 0 0 15px #33ff33;
+    text-align: left;
+}
+.btn-custom {
+    background-color: #33ff33;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 0 10px #33ff33;
+    border-radius: 10px;
+}
+.btn-custom:hover {
+    background-color: #28cc28;
+    box-shadow: 0 0 15px #28cc28;
+}
+.btn-secondary {
+    background: #333;
+    color: #bbb;
+    border-radius: 10px;
+}
