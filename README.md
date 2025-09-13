@@ -82,92 +82,11 @@ Welcome to my collection of writeups from the Amazon AppSec CTF (North America r
 
 **Key Learning**: Whitelist validation is more secure than blacklist filtering for both SQL and file uploads.
 
-## 🛠️ Technical Skills Demonstrated
 
-### Web Application Security
-- SQL Injection exploitation and prevention
-- File upload security and bypass techniques
-- XML External Entity (XXE) attacks
-- Server-Side Request Forgery (SSRF)
-- Access control bypass techniques
-- Code injection and RCE
-
-### Cloud Security
-- AWS/LocalStack enumeration
-- Git repository security
-- Cloud credential management
-- Lambda function security
-
-### AI/ML Security
-- Prompt injection attacks
-- AI model manipulation
-- Data exfiltration through AI systems
-- Classification system bypass
-
-### Secure Coding
-- Input validation and sanitization
-- Output encoding and escaping
-- Defense in depth principles
-- Security testing methodologies
-
-## 📊 Challenge Statistics
-
-| Category | Challenges | Completed | Success Rate |
-|----------|------------|-----------|--------------|
-| Web Security | 2 | 2 | 100% |
-| Cloud Security | 1 | 1 | 100% |
-| AI/ML Security | 2 | 2 | 100% |
-| Secure Coding | 2 | 2 | 100% |
-| **Total** | **7** | **7** | **100%** |
-
-## 🔧 Tools and Techniques Used
-
-### Reconnaissance
-- `nmap` - Network scanning
-- `whatweb` - Web technology fingerprinting
-- `GitTools` - Git repository extraction
-- Manual code analysis
-
-### Exploitation
-- `curl` - HTTP request manipulation
-- `requests` (Python) - Automated exploitation
-- Custom Python scripts
-- Base64 encoding/decoding
-- XML payload crafting
-
-### Cloud Security
-- AWS CLI with LocalStack
-- Git repository analysis
-- Lambda function manipulation
-- Cloud service enumeration
-
-### AI Security
-- Prompt engineering
-- Output transformation techniques
-- Classification manipulation
-- Social engineering tactics
 
 ## 🚀 Upcoming Updates
 
-I'm currently working on several improvements to this repository:
-
-### 📝 Content Updates
-- [ ] **Detailed exploit scripts** - Adding more comprehensive PoC code
-- [ ] **Video walkthroughs** - Screen recordings of exploitation process
-- [ ] **Defense strategies** - Detailed mitigation recommendations
-- [ ] **Additional challenges** - More writeups from other CTF events
-
-### 🔧 Technical Improvements
-- [ ] **Interactive demos** - Docker containers for hands-on practice
-- [ ] **Automated testing** - Scripts to verify fixes
-- [ ] **Security checklists** - Best practices for each vulnerability type
-- [ ] **Performance analysis** - Impact assessment of security fixes
-
-### 📚 Documentation
-- [ ] **Learning paths** - Structured curriculum for each security domain
-- [ ] **Reference guides** - Quick lookup for common vulnerabilities
-- [ ] **Tool comparisons** - Analysis of different security tools
-- [ ] **Industry insights** - Real-world application of CTF techniques
+I'm currently working on adding several other writeups/improvements to this repository:
 
 ## 🤝 Contributing
 
@@ -192,22 +111,10 @@ All writeups and techniques described in this repository are for **educational p
 ## 📞 Contact
 
 - **GitHub**: [@primeop](https://github.com/primeop)
-- **CTF Team**: [Your Team Name]
+- **CTF Team**: prim30p
 - **Writeup Questions**: Open an issue in this repository
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
-
-## 🏅 Achievements
-
-- ✅ **100% Challenge Completion Rate**
-- ✅ **Multi-domain Security Expertise** (Web, Cloud, AI, Coding)
-- ✅ **Advanced Exploitation Techniques**
-- ✅ **Comprehensive Documentation**
-- ✅ **Real-world Security Insights**
 
 *Last Updated: January 2025*
 
