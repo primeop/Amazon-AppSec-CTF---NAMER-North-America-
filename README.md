@@ -6,7 +6,7 @@ Welcome to my collection of writeups from the Amazon AppSec CTF (North America r
 
 **Event**: Amazon AppSec CTF - NAMER North America  
 **Duration**: 48 hours  
-**Categories**: Web Security, Cloud Security, AI/ML Security, Secure Coding  
+**Categories**: Web Security, Cloud Security, AI/ML Security, Secure Coding, full pwn 
 **Total Challenges**: 7+ challenges completed  
 
 ## 📁 Challenge Categories
